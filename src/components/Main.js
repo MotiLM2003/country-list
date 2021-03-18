@@ -62,7 +62,7 @@ function Main() {
 
   return (
     <div>
-      <div class='search-container'>
+      <section class='toolbar'>
         Select a coutry:
         <select
           onChange={(e) => {
@@ -73,32 +73,29 @@ function Main() {
           <option value='1'>Capital</option>
           <option value='2'>Population</option>
         </select>
-      </div>
+      </section>
       <table border='1'>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Native Name</th>
-            <th>Capital</th>
-            <th>Population</th>
-            <th>flag</th>
-          </tr>
-        </thead>
-        <tbody>
-          {state.map((country, index) => {
-            return (
-              <tr>
-                <td>{country.name}</td>
-                <td>{country.nativeName}</td>
-                <td>{country.capital}</td>
-                <td>{country.population}</td>
-                <td>
-                  <img src={country.flag} />
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
+        <tr>
+          <th>Name</th>
+          <th>Native Name</th>
+          <th>Capital</th>
+          <th>Population</th>
+          <th>flag</th>
+        </tr>
+
+        {state.map((ct) => {
+          return (
+            <tr>
+              <td>{ct.name}</td>
+              <td>{ct.nativeName}</td>
+              <td>{ct.capital}</td>
+              <td>{ct.population}</td>
+              <td>
+                <img src={ct.flag} alt='country flag' />
+              </td>
+            </tr>
+          );
+        })}
       </table>
     </div>
   );

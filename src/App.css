@@ -6,11 +6,19 @@ body {
   text-align: center;
 }
 
-.App img {
+img {
   width: 75px;
   height: 50px;
 }
 
-.search-container {
-  margin: 16px 0;
+.header {
+  font-size: '25px';
+  font-weight: 'bold';
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.toolbar {
+  margin-bottom: 20px;
 }

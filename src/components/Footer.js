@@ -3,7 +3,9 @@ import React from 'react';
 function Footer() {
   return (
     <div>
-      <p>&copy; - כל הזכויות שמורות Gasan shhade {new Date().getFullYear()}</p>
+      <span>
+        &copy; - כל הזכויות שמורות לגסאן שחאדי {new Date().getFullYear()}
+      </span>
     </div>
   );
 }
